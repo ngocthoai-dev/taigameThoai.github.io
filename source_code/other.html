@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tai game mien phi</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <script src="type.js"></script>
+</head>
+
+<body>
+  <div id="otherPage" class="position-relative">
+    <nav class="navbar navbar-expand-lg fixed-top row nav p-0">
+      <div class="nav-header col-md-6 offset-lg-1 col-lg-5 d-block">
+        <a class="navbar-brand float-left px-2 py-2 ho-color" href="./assignment.html">
+          taigame
+          <i class="fab fa-d-and-d"></i>
+        </a>
+        <form class="form-inline my-0 py-1 search">
+          <input class="form-control mr-sm-2 searchIn" type="search" placeholder="Tìm game" aria-label="Search" />
+          <a class="searchBtn text-dark" href="./search.html"><i class="fa fa-search"></i></a>
+        </form>
+      </div>
+      <button class="navbar-toggler collapsed mr-4 bg-light" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-angle-down fa-lg mt-2"></i></span>
+      </button>
+      <div class="nav-container col-12 offset-xl-2 offset-lg-1 col-xl-4 col-lg-5 collapse navbar-collapse"
+        id="navbarSupportedContent">
+        <div class="nav-list float-left mr-3">
+          <ul class="m-0 p-0 float-left navbar-nav">
+            <li class="nav-item active nav-list">
+              <a href="./assignment.html" class="nav-link ho-color">Game PC</a>
+            </li>
+            <li class="nav-item active nav-list">
+              <a href="./android.html" class="nav-link ho-color">Android</a>
+            </li>
+            <li class="nav-item active nav-list">
+              <a href="./ios.html" class="nav-link ho-color">iOS</a>
+            </li>
+            <li class="nav-item dropdown sign-in py-1">
+              <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                tham gia
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <button class="dropdown-item signIn" href="#"><i class="fas fa-sign-in-alt mr-2"></i>đăng nhập</button>
+                <button class="dropdown-item register" href="#"><i class="fas fa-edit mr-2"></i>đăng ký</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="fixed-top">
+      <div class="border-1 rounded-lg bg-white" id="searchGameRecommendation">
+
+        <div class="force-overflow"></div>
+      </div>
+    </div>
+    <div class="wrapperContainer">
+      <div class="row pt-4">
+        <div class="game left-side offset-lg-1 col-lg-7">
+
+        </div>
+        <div class="right-side ml-3 col-lg-3 p-0">
+          <div class="category mb-3">
+            <div class="cate-title">Thể loại game</div>
+            <ul class="p-0 m-0">
+              <div class="cate-list row">
+                <li class="col-md-6"><a href="./action.html"><i class="fas fa-gavel pr-2"></i>Hành động</a>
+                </li>
+                <li class="col-md-6"><a href="./adventure.html"><i class="fas fa-dharmachakra pr-2"></i>Phiêu liêu</a>
+                </li>
+              </div>
+              <div class="cate-list row">
+                <li class="col-md-6"><a href="./FPS.html"><i class="fas fa-fighter-jet pr-2"></i>FPS</a></li>
+                <li class="col-md-6"><a href="./RPG.html"><i class="fab fa-pied-piper-alt pr-2"></i>RPG</a>
+                </li>
+              </div>
+              <div class="cate-list row">
+                <li class="col-md-6"><a href="./strategy.html"><i class="far fa-map pr-2"></i>Chiến thuật</a>
+                </li>
+                <li class="col-md-6"><a href="./fighting.html"><i class="fas fa-bolt pr-2"></i>Đối kháng</a>
+                </li>
+              </div>
+              <div class="cate-list row">
+                <li class="col-md-6"><a href="./sport.html"><i class="fas fa-futbol pr-2"></i>Thể thao</a>
+                </li>
+                <li class="col-md-6"><a href="./intelligent.html"><i class="fas fa-hamsa pr-2"></i>Trí tuệ</a>
+                </li>
+              </div>
+              <div class="cate-list row border-0">
+                <li class="col-md-6"><a href="./other.html"><i class="fas fa-hamburger pr-2"></i>Khác</a></li>
+              </div>
+            </ul>
+          </div>
+          <div class="filter mb-3">
+            <div class="filter-title">Bộ lọc game</div>
+            <form>
+              <div class="form-group text-muted text-center m-0 font-weight-bold">Năm Phát Hành</div>
+              <div class="form-group row m-0">
+                <label for="exampleFormControlSelect1" class="my-auto p-0 col-5">Từ năm: </label>
+                <select class="form-control col-7 yearFrom" id="exampleFormControlSelect1">
+                  <option value="" disabled selected>-- Chọn Năm --</option>
+                  <option>2000</option>
+                  <option>2005</option>
+                  <option>2010</option>
+                  <option>2015</option>
+                  <option>2019</option>
+                </select>
+              </div>
+              <div class="form-group row m-0">
+                <label for="exampleFormControlSelect1" class="my-auto p-0 col-5">Tới năm: </label>
+                <select class="form-control col-7 yearTo" id="exampleFormControlSelect1">
+                  <option value="" disabled selected>-- Chọn Năm --</option>
+                  <option>2000</option>
+                  <option>2005</option>
+                  <option>2010</option>
+                  <option>2015</option>
+                  <option>2019</option>
+                </select>
+              </div>
+              <div class="form-group text-muted text-center m-0 font-weight-bold">Dung Lượng</div>
+              <div class="form-group row m-0">
+                <label for="exampleFormControlSelect1" class="my-auto p-0 col-5">Lớn hơn(GB): </label>
+                <input type="text" class="form-control col-7 memFrom" id="exampleFormControlInput1" placeholder="0-100">
+              </div>
+              <div class="form-group row m-0">
+                <label for="exampleFormControlSelect1" class="my-auto p-0 col-5">Nhỏ hơn(GB): </label>
+                <input type="text" class="form-control col-7 memTo" id="exampleFormControlInput1" placeholder="0-100">
+              </div>
+              <div class="form-group text-muted text-center m-0 font-weight-bold">RAM</div>
+              <div class="form-group row m-0">
+                <label for="exampleFormControlSelect1" class="my-auto p-0 col-5">Thấp hơn(GB): </label>
+                <select class="form-control col-7 ramGB" id="exampleFormControlSelect1">
+                  <option value="" disabled selected>-- Chọn RAM --</option>
+                  <option>2</option>
+                  <option>4</option>
+                  <option>8</option>
+                  <option>16</option>
+                </select>
+              </div>
+              <div class="form-group text-muted text-center m-0 font-weight-bold">Thể loại</div>
+              <div class="form-group row m-0">
+                <select class="form-control typeFilter" id="exampleFormControlSelect1" placeholder="-- All --">
+                  <option value="" disabled selected>-- All --</option>
+                  <option>Hành động</option>
+                  <option>Phiêu liêu</option>
+                  <option>FPS</option>
+                  <option>RPG</option>
+                  <option>Đối kháng</option>
+                  <option>Thể thao</option>
+                  <option>Chiến thuật</option>
+                  <option>Trí tuệ</option>
+                  <option>Khác</option>
+                </select>
+              </div>
+              <div class="form-group text-muted text-center m-0 mb-4 filterBtn">
+                <a href="./filter.html"><button type="button" class="btn btn-primary">Tìm kiếm</button></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row footer mt-5">
+        <div class="card text-center border-0 col-12">
+          <div class="card-body d-flex justify-content-center text-center">
+            <a href="./assignment.html">
+              <p class="card-text mx-5">Home</p>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100010576336414">
+              <p class="card-text mx-5">About us</p>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100010576336414">
+              <p class="card-text mx-5">Contatcts</p>
+            </a>
+          </div>
+          <div class="pb-4">Phone: 0974858358</div>
+          <div class="card-body d-flex justify-content-center text-center pt-0">
+            <a href="https://www.youtube.com/channel/UCZgnN9-EPs-kTvxEQlMGdxg?view_as=subscriber"><i
+                class="fab fa-youtube fa-3x mx-2"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100010576336414"><i
+                class="fab fa-facebook fa-3x mx-2"></i></a>
+            <a href="https://twitter.com/pn_thoai"><i class="fab fa-twitter fa-3x mx-2"></i></a>
+            <a href="https://aboutme.google.com/u/0/?referer=gplus"><i class="fab fa-google-plus fa-3x mx-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rest position-absolute sticky-top w-100 h-100"></div>
+  </div>
+  <div class="imgInfo card">
+  </div>
+  <div class="participate">
+  </div>
+</body>
+
+</html>
